@@ -1,4 +1,9 @@
-let emails = [];
+let emails = JSON.parse(localStorage.getItem('emails'));
+
+if (!emails) {
+    emails = [];
+}
+
 
 function sendEmail() {
     let to = document.getElementById('to').value;
@@ -53,12 +58,15 @@ function switchScreen(reqScreen) {
 function getEmails() {
     //<button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
     mailList.innerHTML = "";
+    //$('#mailList').html("");
 
     let mailBox = JSON.parse(localStorage.getItem('emails'));
-    mailBox.map(val=>{
-        $('#mailList').append(`<button type="button" class="list-group-item list-group-item-action">${val.subject}</button>`);
-    });
 
+    if (mailBox) {
+        mailBox.map(val=>{
+            $('#mailList').append(`<button type="button" class="list-group-item list-group-item-action">${val.subject}</button>`);
+        });
+    }
 }
 
 getEmails();
