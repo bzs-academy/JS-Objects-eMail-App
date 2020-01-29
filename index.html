@@ -29,6 +29,11 @@
         </ul>
     </div>
     </nav>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Account</label>
+        <input type="email" class="form-control" id="account" value="name@example.com">
+    </div>
     
 <div id="compose" class="container mt-5" hidden>
     <div class="form-group">
@@ -55,16 +60,16 @@
 </div>
 
 <div id="inbox">
-    <div id="mailList" class="list-group d-inline-block float-left w-25 vh-100">
-        
-        
-        
+    <div id="mailList" class="list-group d-inline-block float-left w-25 vh-100"></div>
+
+    <div class="d-inline-block w-75 vh-100 pl-5 pt-5">
+        <h6 id="toInfo">To goes here</h6>
+        <h6 id="ccInfo">CC goes here</h6>
+        <p id="messageInfo">Message goes here</p>
     </div>
 </div>
 
-<div class="d-inline-block w-75 vh-100 pl-5 pt-5">
-    Message Detail
-</div>
+
 
 </body>
 </html>
